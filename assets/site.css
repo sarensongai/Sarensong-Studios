@@ -158,31 +158,6 @@ h3 { font-size: var(--t-h3); font-weight: 700; line-height: 1.15; }
 }
 @media (prefers-reduced-motion: reduce) { .gallery img { transition: none; } .gallery a:hover img { transform: none; } }
 
-.features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 40px; }
-.features li { display: grid; gap: 8px; align-content: start; padding-top: 18px; border-top: 1px solid var(--night-rule); min-width: 0; }
-.features p { font-size: var(--t-sm); }
-@media (max-width: 860px) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .features { grid-template-columns: 1fr; } }
-
-.roadmap { display: grid; gap: 24px; }
-.track { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.track li { position: relative; display: grid; gap: 6px; align-content: start; padding: 26px 24px 0 0; border-top: 2px solid var(--night-rule); min-width: 0; }
-.track li::before { content: ""; position: absolute; top: -7px; left: 0; width: 12px; height: 12px; background: var(--night); border: 2px solid var(--night-mist); }
-.track .state { font: 600 var(--t-label) var(--head); letter-spacing: 0.14em; text-transform: uppercase; color: var(--night-mist); }
-.track strong { font: 700 1.1875rem/1.2 var(--head); }
-.track span:last-child { font-size: var(--t-sm); color: var(--night-mist); }
-.track .done { border-top-color: var(--lichen); }
-.track .done::before { background: var(--lichen); border-color: var(--lichen); }
-.track .now::before { background: var(--paper); border-color: var(--paper); }
-.track .done .state, .track .now .state { color: var(--lichen); }
-@media (max-width: 860px) {
-  .track { grid-template-columns: 1fr; }
-  .track li { border-top: 0; border-left: 2px solid var(--night-rule); padding: 0 0 24px 24px; }
-  .track li:last-child { padding-bottom: 0; }
-  .track li::before { top: 4px; left: -7px; }
-  .track .done { border-left-color: var(--lichen); }
-}
-
 /* How we build */
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
 .stats div { display: grid; gap: 10px; align-content: start; padding: 22px 24px 4px 0; min-width: 0; }

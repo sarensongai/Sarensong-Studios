@@ -27,7 +27,7 @@ python3 -m http.server 8000
 ## Before going live
 
 - [ ] **Domain and email.** The site uses `hello@sarensong.com` and `sarensong.com`. Find and replace across `index.html`, `press.html`, `BRAND.md` and `brand/email/signature.html` if the domain ends up different.
-- [ ] **Roadmap.** The four stages on the homepage come from the Skyhoard tour and technical overview. Adjust to the real plan.
+- [ ] **Skyhoard name.** Marked as a working title on the site and press kit. Remove "working title" once it is final.
 - [ ] **Platform.** The press kit says PC. Change it if that's wrong.
 - [ ] **Socials.** Claim `@sarensong`, then add links to the footer and the press kit fact sheet.
 - [ ] **Email signature.** Put your name in `brand/email/signature.html`.

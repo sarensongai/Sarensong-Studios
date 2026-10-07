@@ -69,15 +69,17 @@ One family keeps the site, the logo and every document consistent. Montserrat ap
 
 Plain, warm and specific. Short sentences and concrete nouns: wheel, cannon, plate, sand, forge.
 
-- Show the game doing things: "Plates crack and get blown off, bare timber breaches and burns, and somebody has to grab the sand."
+- Show, don't explain: screenshots and short lines like "A full hold is a slow ship." Keep mechanics private until announcement.
 - Be honest about stage: "pre-alpha", "prototype", "planned".
 - Talk about Claude the way you'd talk about a crewmate: what it builds and how, with real numbers. Avoid hype like "revolutionary" or "AI-powered".
 
 ## Skyhoard
 
-- **Tagline:** Two dwarf crews. Two airships. One floating island.
-- **One line:** Skyhoard is a first-person multiplayer game where two crews of dwarves fly armoured airships and fight over a floating island.
+- **Name:** working title.
+- **Tagline:** A full hold is a slow ship.
+- **One line:** Skyhoard is a first-person multiplayer game about dwarf crews, armoured airships and the riches they try to bring home.
 - **Status:** Pre-alpha, Unity 6, PC.
+- **What stays private:** the raid structure, crew and raid sizes, economy and roadmap. Public material describes the game at genre level only, with screenshots.
 - **Screenshots:** `assets/skyhoard/` (14 in-game shots from the forgeship tour, 1600×900).
 
 ## Boilerplate
@@ -86,10 +88,10 @@ Plain, warm and specific. Short sentences and concrete nouns: wheel, cannon, pla
 > Sarensong Studios is a one-person game studio that builds its games with Claude Code.
 
 **Studio, paragraph**
-> Sarensong Studios is an independent game studio founded in 2026 by a solo developer. Its games are engineered with Claude Code: the gameplay code, the scripts that model 3D assets and assemble every scene, the build tooling and the automated tests that let the game play itself. The developer directs, designs, writes the music and makes every final call. The studio's first game, Skyhoard, is in pre-alpha.
+> Sarensong Studios is an independent game studio founded in 2026 by a solo developer. Its games are engineered with Claude Code: the gameplay code, the scripts that build 3D models and assemble every scene, the build tooling and the automated tests that let the game play itself. The developer designs the game, directs the art and makes every final call. The studio's first game, Skyhoard, is in pre-alpha.
 
 **Social bio (under 160 characters)**
-> One-person game studio, built with Claude. Now making Skyhoard: two dwarf crews, two airships, one floating island.
+> One-person game studio, built with Claude. Now making Skyhoard: dwarves, airships, and a full hold to get home.
 
 ## Social kit
 
