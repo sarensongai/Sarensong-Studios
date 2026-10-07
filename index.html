@@ -4,334 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sarensong Studios</title>
-<meta name="description" content="Sarensong Studios is an independent game studio making stylized, story-led games. Our debut, a stylized island fable about dwarves, is in development.">
+<meta name="description" content="Sarensong Studios is an independent game studio making stylized, story-led games. Our debut, Embertide, is a stylized island fable about dwarves.">
 <meta name="theme-color" content="#07111A">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sarensong Studios">
-<meta property="og:description" content="An independent game studio making stylized, story-led games. Project 01 is in development.">
+<meta property="og:description" content="An independent game studio making stylized, story-led games. Now building Embertide.">
 <meta property="og:image" content="assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=Martian+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: sonar chart. An island rises as a ridgeline out of a sea of waveforms; content sits in HUD-framed bands on an abyssal ground. Sea-glass is the studio's signal colour, forge-ember belongs to the dwarf project. */
-:root {
-  color-scheme: dark;
-  --abyss: #07111A;
-  --deep: #0C1A26;
-  --rule: #1B2C3A;
-  --fg: #E4EEF1;
-  --muted: #8EA3B0;
-  --seaglass: #5ED6C9;
-  --ember: #FF9F57;
-
-  --display: "Chakra Petch", "Bahnschrift", "DIN Alternate", "Arial Narrow", sans-serif;
-  --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --mono: "Martian Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-
-  --t-label: 0.6875rem;
-  --t-sm: 0.9375rem;
-  --t-md: 1.0625rem;
-  --t-lg: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
-  --t-h3: 1.25rem;
-  --t-h2: clamp(1.9rem, 1.25rem + 2.4vw, 3rem);
-  --t-hero: clamp(2.75rem, 1.3rem + 6vw, 5.75rem);
-
-  --gutter: clamp(16px, 4vw, 40px);
-  --max: 1180px;
-  --section: clamp(72px, 10vw, 136px);
-}
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
-  margin: 0;
-  background: var(--abyss);
-  color: var(--fg);
-  font-family: var(--body);
-  font-size: var(--t-md);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-h1, h2, h3, p, dl, dd, figure, ol, ul { margin: 0; }
-ol, ul { padding: 0; list-style: none; }
-img { max-width: 100%; display: block; }
-a { color: inherit; }
-::selection { background: color-mix(in srgb, var(--seaglass) 35%, transparent); color: var(--fg); }
-:focus-visible { outline: 2px solid var(--seaglass); outline-offset: 3px; }
-
-.wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
-
-.skip {
-  position: absolute; left: var(--gutter); top: -60px; z-index: 50;
-  background: var(--seaglass); color: var(--abyss); padding: 10px 14px;
-  font-family: var(--mono); font-size: var(--t-label); text-transform: uppercase; letter-spacing: 0.1em;
-}
-.skip:focus { top: 12px; }
-
-.label {
-  font-family: var(--mono);
-  font-size: var(--t-label);
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-h1, h2, h3 { font-family: var(--display); text-wrap: balance; }
-h2 { font-size: var(--t-h2); font-weight: 600; line-height: 1.08; letter-spacing: -0.01em; }
-h3 { font-size: var(--t-h3); font-weight: 600; line-height: 1.25; }
-.lede { font-size: var(--t-lg); color: var(--muted); max-width: 60ch; line-height: 1.6; }
-
-/* Buttons */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-  font-family: var(--mono); font-size: var(--t-label); font-weight: 500;
-  letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
-  padding: 15px 22px; border: 1px solid transparent; cursor: pointer;
-  background: none; color: var(--fg);
-  transition: background-color .2s ease, color .2s ease, border-color .2s ease, filter .2s ease;
-}
-.btn-primary {
-  background: var(--seaglass); color: var(--abyss);
-  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
-}
-.btn-primary:hover { filter: brightness(1.1); }
-.btn-ghost { border-color: color-mix(in srgb, var(--seaglass) 40%, transparent); }
-.btn-ghost:hover { background: color-mix(in srgb, var(--seaglass) 12%, transparent); border-color: var(--seaglass); }
-.btn-sm { padding: 10px 14px; }
-.btn .arrow { transition: transform .2s ease; }
-.btn:hover .arrow { transform: translateX(3px); }
-
-/* Nav */
-.nav {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
-  background: color-mix(in srgb, var(--abyss) 78%, transparent);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
-  backdrop-filter: blur(14px) saturate(140%);
-  border-bottom: 1px solid var(--rule);
-}
-.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 68px; }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--fg); }
-.mark { width: 42px; height: 21px; flex: none; overflow: visible; }
-.mark path { stroke: var(--seaglass); }
-.mark circle { fill: var(--ember); }
-.wordmark { display: grid; line-height: 1; }
-.wordmark b { font-family: var(--display); font-weight: 700; font-size: 1rem; letter-spacing: 0.24em; }
-.wordmark span { font-family: var(--mono); font-size: 0.5625rem; letter-spacing: 0.42em; color: var(--muted); margin-top: 5px; }
-.nav-links { display: flex; align-items: center; gap: 28px; }
-.nav-links a:not(.btn) {
-  font-family: var(--mono); font-size: var(--t-label); letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--muted); text-decoration: none; transition: color .2s ease;
-}
-.nav-links a:not(.btn):hover { color: var(--fg); }
-@media (max-width: 760px) { .nav-links a:not(.btn) { display: none; } }
-
-/* Hero */
-.hero { position: relative; overflow: hidden; isolation: isolate; }
-.hero::before {
-  content: ""; position: absolute; inset: 0; z-index: -3;
-  background-image:
-    linear-gradient(var(--rule) 1px, transparent 1px),
-    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
-  background-size: 72px 72px;
-  background-position: center top;
-  opacity: 0.55;
-  -webkit-mask-image: radial-gradient(70% 60% at 70% 30%, #000 0%, transparent 75%);
-  mask-image: radial-gradient(70% 60% at 70% 30%, #000 0%, transparent 75%);
-}
-.hero::after {
-  content: ""; position: absolute; inset: 0; z-index: -3;
-  background: radial-gradient(38% 46% at 70% 44%, color-mix(in srgb, var(--seaglass) 14%, transparent), transparent 70%);
-}
-.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; display: block; }
-.hero-fade {
-  position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background:
-    linear-gradient(90deg, var(--abyss) 0%, color-mix(in srgb, var(--abyss) 82%, transparent) 32%, transparent 62%),
-    linear-gradient(0deg, var(--abyss) 0%, transparent 22%);
-}
-.hero-inner {
-  display: grid; gap: 28px; justify-items: start;
-  padding-block: clamp(80px, 11vw, 150px) clamp(56px, 8vw, 110px);
-}
-.hero-inner > * { max-width: 640px; }
-.eyebrow { display: inline-flex; align-items: center; gap: 12px; color: var(--seaglass); }
-.pulse {
-  width: 7px; height: 7px; border-radius: 50%; background: var(--seaglass); flex: none;
-  box-shadow: 0 0 0 0 color-mix(in srgb, var(--seaglass) 60%, transparent);
-  animation: pulse 2.4s ease-out infinite;
-}
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--seaglass) 55%, transparent); }
-  70%, 100% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--seaglass) 0%, transparent); }
-}
-h1 { font-size: var(--t-hero); font-weight: 700; line-height: 0.98; letter-spacing: -0.02em; }
-h1 em { font-style: normal; color: var(--seaglass); }
-.cta-row { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 6px; }
-
-.readout {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
-  border: 1px solid var(--rule);
-  background: color-mix(in srgb, var(--deep) 72%, transparent);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  margin-bottom: clamp(32px, 5vw, 56px);
-}
-.readout div { display: grid; gap: 6px; padding: 18px 22px; min-width: 0; }
-.readout div + div { border-left: 1px solid var(--rule); }
-.readout dd { font-family: var(--display); font-size: 1.25rem; font-weight: 600; font-variant-numeric: tabular-nums; }
-
-@media (max-width: 760px) {
-  .hero::before { -webkit-mask-image: radial-gradient(90% 50% at 50% 70%, #000 0%, transparent 75%); mask-image: radial-gradient(90% 50% at 50% 70%, #000 0%, transparent 75%); }
-  .hero::after { background: radial-gradient(70% 30% at 50% 70%, color-mix(in srgb, var(--seaglass) 14%, transparent), transparent 70%); }
-  .hero-fade {
-    background:
-      linear-gradient(180deg, color-mix(in srgb, var(--abyss) 70%, transparent) 0%, color-mix(in srgb, var(--abyss) 35%, transparent) 50%, transparent 62%),
-      linear-gradient(0deg, var(--abyss) 0%, transparent 14%);
-  }
-  .hero-inner { padding-bottom: clamp(230px, 66vw, 300px); }
-  .readout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .readout div:nth-child(3) { border-left: 0; }
-  .readout div:nth-child(n+3) { border-top: 1px solid var(--rule); }
-  .readout div { padding: 14px 16px; }
-}
-
-/* Sections */
-.section { padding-block: var(--section); border-top: 1px solid var(--rule); }
-.section > .wrap { display: grid; gap: clamp(40px, 6vw, 72px); }
-.section-head { display: grid; gap: 18px; max-width: 760px; }
-.section-head .label { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
-
-.chip {
-  display: inline-flex; align-items: center; gap: 8px; width: max-content;
-  font-family: var(--mono); font-size: 0.625rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-  padding: 5px 9px; border: 1px solid currentColor; line-height: 1.2;
-}
-.chip::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
-.chip-sea { color: var(--seaglass); }
-.chip-ember { color: var(--ember); }
-
-/* Project 01 */
-.project {
-  background:
-    radial-gradient(55% 45% at 88% 0%, color-mix(in srgb, var(--ember) 9%, transparent), transparent 70%),
-    var(--abyss);
-}
-.project h2 em { font-style: normal; color: var(--ember); }
-.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 4vw, 48px); }
-.pillars article { display: grid; gap: 12px; align-content: start; padding-top: 22px; border-top: 1px solid var(--rule); position: relative; min-width: 0; }
-.pillars article::before { content: ""; position: absolute; top: -1px; left: 0; width: 32px; height: 2px; background: var(--ember); }
-.pillars p:last-child { color: var(--muted); font-size: var(--t-sm); }
-
-.media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.shot { display: grid; gap: 10px; min-width: 0; }
-.shot-wide { grid-column: 1 / -1; }
-.frame {
-  position: relative; aspect-ratio: 16 / 9; max-width: 100%; overflow: hidden;
-  border: 1px solid var(--rule);
-  background:
-    repeating-linear-gradient(0deg, color-mix(in srgb, var(--fg) 3%, transparent) 0 1px, transparent 1px 4px),
-    radial-gradient(70% 90% at 50% 110%, color-mix(in srgb, var(--ember) 13%, transparent), transparent 70%),
-    var(--deep);
-  display: grid; place-content: center; justify-items: center; gap: 10px; text-align: center; padding: 16px;
-}
-.shot-wide .frame { aspect-ratio: 21 / 9; }
-.frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.frame::before, .frame::after { content: ""; position: absolute; width: 18px; height: 18px; border: 0 solid var(--ember); }
-.frame::before { top: 10px; left: 10px; border-top-width: 1px; border-left-width: 1px; }
-.frame::after { right: 10px; bottom: 10px; border-right-width: 1px; border-bottom-width: 1px; }
-.frame .label { display: inline-flex; align-items: center; gap: 10px; }
-.frame .label::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--ember); animation: blink 1.6s steps(2, jump-none) infinite; }
-@keyframes blink { 50% { opacity: 0.2; } }
-.frame strong { font-family: var(--display); font-weight: 600; font-size: 1.125rem; }
-
-.roadmap { display: grid; gap: 28px; }
-.track { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.track li { position: relative; display: grid; gap: 6px; align-content: start; padding: 28px 20px 0 0; border-top: 1px solid var(--rule); min-width: 0; }
-.track li::before {
-  content: ""; position: absolute; top: -6px; left: 0; width: 11px; height: 11px; border-radius: 50%;
-  border: 1px solid var(--muted); background: var(--abyss);
-}
-.track .state { font-family: var(--mono); font-size: var(--t-label); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.track strong { font-family: var(--display); font-weight: 600; font-size: 1.125rem; }
-.track span:last-child { color: var(--muted); font-size: var(--t-sm); }
-.track .done { border-top-color: var(--seaglass); }
-.track .done::before { background: var(--seaglass); border-color: var(--seaglass); }
-.track .done .state { color: var(--seaglass); }
-.track .now::before {
-  background: var(--ember); border-color: var(--ember);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ember) 22%, transparent), 0 0 18px color-mix(in srgb, var(--ember) 60%, transparent);
-}
-.track .now .state { color: var(--ember); }
-
-@media (max-width: 860px) {
-  .pillars { grid-template-columns: 1fr; }
-  .media { grid-template-columns: 1fr; }
-  .shot-wide .frame { aspect-ratio: 16 / 9; }
-  .track { grid-template-columns: 1fr; }
-  .track li { border-top: 0; border-left: 1px solid var(--rule); padding: 0 0 26px 26px; }
-  .track li:last-child { padding-bottom: 0; }
-  .track li::before { top: 4px; left: -6px; }
-  .track .done { border-left-color: var(--seaglass); }
-}
-
-/* Studio */
-.studio-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); align-items: start; }
-.studio-copy { display: grid; gap: 20px; }
-.studio-copy p:not(.label) { color: var(--muted); max-width: 58ch; }
-.spec { border: 1px solid var(--rule); background: var(--deep); position: relative; }
-.spec::before, .spec::after { content: ""; position: absolute; width: 14px; height: 14px; border: 0 solid var(--seaglass); }
-.spec::before { top: -1px; left: -1px; border-top-width: 2px; border-left-width: 2px; }
-.spec::after { bottom: -1px; right: -1px; border-bottom-width: 2px; border-right-width: 2px; }
-.spec div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 15px 22px; align-items: baseline; }
-.spec div + div { border-top: 1px solid var(--rule); }
-.spec dd { overflow-wrap: anywhere; }
-@media (max-width: 860px) {
-  .studio-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 420px) {
-  .spec div { grid-template-columns: 1fr; gap: 4px; padding: 14px 16px; }
-}
-
-/* Pipeline */
-.pipe { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
-.pipe li { background: var(--abyss); padding: clamp(24px, 3vw, 36px); display: grid; gap: 14px; align-content: start; min-width: 0; }
-.pipe p { color: var(--muted); font-size: var(--t-sm); }
-@media (max-width: 760px) { .pipe { grid-template-columns: 1fr; } }
-
-/* Contact */
-.contact {
-  background:
-    radial-gradient(50% 70% at 50% 120%, color-mix(in srgb, var(--seaglass) 13%, transparent), transparent 70%),
-    var(--abyss);
-}
-.contact .wrap { justify-items: center; text-align: center; gap: 22px; }
-.contact .lede { margin-inline: auto; }
-.contact h2 { font-size: clamp(2.4rem, 1.4rem + 4vw, 4.25rem); }
-.email-box {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 18px;
-  margin-top: 10px; padding: 18px 22px; border: 1px solid var(--rule); background: var(--deep); max-width: 100%;
-}
-.email { font-family: var(--display); font-weight: 600; font-size: clamp(1.3rem, 1rem + 1.6vw, 2rem); overflow-wrap: anywhere; user-select: all; -webkit-user-select: all; }
-.email-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-
-/* Footer */
-.foot { border-top: 1px solid var(--rule); padding-block: 32px; }
-.foot .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 32px; }
-.foot a.label { text-decoration: none; }
-.foot a.label:hover { color: var(--fg); }
-
-@media (prefers-reduced-motion: reduce) {
-  .pulse, .frame .label::before { animation: none; }
-  .btn, .btn .arrow { transition: none; }
-}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Grenze:wght@800&family=Hanken+Grotesk:wght@400;500;600&family=Martian+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -349,6 +33,7 @@ h1 em { font-style: normal; color: var(--seaglass); }
       <a href="#project">Project 01</a>
       <a href="#studio">Studio</a>
       <a href="#pipeline">Pipeline</a>
+      <a href="press.html">Press kit</a>
       <a class="btn btn-ghost btn-sm" href="#contact">Contact</a>
     </div>
   </div>
@@ -380,9 +65,10 @@ h1 em { font-style: normal; color: var(--seaglass); }
   <section class="section project" id="project" aria-labelledby="project-title">
     <div class="wrap">
       <div class="section-head">
-        <p class="label"><span class="chip chip-ember">Project 01</span>Working title to be announced</p>
-        <h2 id="project-title">A stylized island fable <em>about dwarves.</em></h2>
-        <p class="lede">Our debut game. A hand-shaped island, a stubborn clan of dwarves, and a story told the way old fables are told: simply, warmly, with something true underneath.</p>
+        <p class="label"><span class="chip chip-ember">Project 01</span>Working title · In development</p>
+        <h2 id="project-title" class="game-title">Embertide</h2>
+        <p class="game-tagline">A stylized island fable about dwarves.</p>
+        <p class="lede">The sea swallowed their mountain. Now a small clan of dwarves must build a new hearth on an island that sings, and learn what its song is trying to tell them.</p>
       </div>
 
       <div class="pillars">
@@ -405,8 +91,8 @@ h1 em { font-style: normal; color: var(--seaglass); }
 
       <div class="media" aria-label="Screenshots">
         <figure class="shot shot-wide">
-          <div class="frame"><span class="label">Signal pending</span><strong>Key art</strong></div>
-          <figcaption class="label">Arrives with the first vertical slice</figcaption>
+          <div class="frame frame-art"><img src="assets/embertide-keyart.jpg" alt="Embertide title card: the game's name above a glowing island rising out of the sea" width="2520" height="1080"></div>
+          <figcaption class="label">Title card · Screenshots arrive with the vertical slice</figcaption>
         </figure>
         <figure class="shot">
           <div class="frame"><span class="label">Signal pending</span><strong>Screenshot 01</strong></div>
@@ -490,7 +176,7 @@ h1 em { font-style: normal; color: var(--seaglass); }
       <div class="email-box">
         <span class="email" id="email">hello@sarensong.com</span>
         <span class="email-actions">
-          <button class="btn btn-ghost btn-sm" id="copy-email" type="button" aria-live="polite">Copy</button>
+          <button class="btn btn-ghost btn-sm" data-copy="email" type="button" aria-live="polite">Copy</button>
           <a class="btn btn-primary btn-sm" href="mailto:hello@sarensong.com">Email us <span class="arrow" aria-hidden="true">→</span></a>
         </span>
       </div>
@@ -508,182 +194,10 @@ h1 em { font-style: normal; color: var(--seaglass); }
       <span class="wordmark"><b>SARENSONG</b><span>STUDIOS</span></span>
     </a>
     <p class="label">© 2026 Sarensong Studios · Game content shown is work in progress</p>
-    <a class="label" href="#top">Back to top ↑</a>
+    <span class="foot-links"><a class="label" href="press.html">Press kit</a><a class="label" href="#top">Back to top ↑</a></span>
   </div>
 </footer>
 
-<script>
-(function () {
-  // Hero: an island rising as a ridgeline out of a sea of waveforms.
-  var canvas = document.querySelector('.hero-canvas');
-  var hero = document.querySelector('.hero');
-  if (!canvas || !canvas.getContext) return;
-  var ctx = canvas.getContext('2d');
-  var styles = getComputedStyle(document.documentElement);
-  function token(name, fallback) { return styles.getPropertyValue(name).trim() || fallback; }
-  function rgb(hex) {
-    var h = hex.replace('#', '');
-    if (h.length === 3) h = h.replace(/./g, '$&$&');
-    var n = parseInt(h, 16);
-    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
-  }
-  var ABYSS = token('--abyss', '#07111A');
-  var SEA = rgb(token('--seaglass', '#5ED6C9'));
-  var EMBER = rgb(token('--ember', '#FF9F57'));
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-  var W = 0, H = 0, raf = 0, running = false, onScreen = true, t0 = performance.now();
-  var pts = new Float32Array(0);
-
-  function rgba(c, a) { return 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a.toFixed(3) + ')'; }
-  function mix(a, b, k) { return [Math.round(a[0] + (b[0] - a[0]) * k), Math.round(a[1] + (b[1] - a[1]) * k), Math.round(a[2] + (b[2] - a[2]) * k)]; }
-  function clamp01(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
-  function easeOut(v) { return 1 - Math.pow(1 - v, 3); }
-
-  function resize() {
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var r = canvas.getBoundingClientRect();
-    W = r.width; H = r.height;
-    canvas.width = Math.max(1, Math.round(W * dpr));
-    canvas.height = Math.max(1, Math.round(H * dpr));
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    pts = new Float32Array(Math.ceil((W + 40) / 4) + 2);
-  }
-
-  function layout() {
-    if (W < 760) {
-      return { cx: W * 0.52, top: H * 0.56, rows: 30, rowC: 0.42, sx: Math.max(70, W * 0.2), peak: Math.min(H * 0.18, 160) };
-    }
-    return { cx: W * 0.7, top: H * 0.24, rows: 46, rowC: 0.42, sx: Math.min(W * 0.13, 230), peak: H * 0.3 };
-  }
-
-  function draw(t) {
-    var L = layout();
-    var rise = reduce.matches ? 1 : easeOut(clamp01((t - 200) / 2600));
-    var bottom = H + 8;
-    var gap = (bottom - L.top) / (L.rows - 1);
-    var summitX = L.cx, summitY = Infinity;
-    ctx.clearRect(0, 0, W, H);
-
-    for (var i = 0; i < L.rows; i++) {
-      var depth = i / (L.rows - 1);
-      var base = L.top + i * gap;
-      var dr = depth - L.rowC;
-      var mass = Math.exp(-(dr * dr) / (2 * 0.12 * 0.12));
-      var amp = 1.5 + depth * 6.5;
-      var n = 0;
-      for (var x = -12; x <= W + 12; x += 4) {
-        var dx = (x - L.cx) / L.sx;
-        var wave = Math.sin(x * 0.011 + t * 0.0008 + i * 0.55) * 0.6 + Math.sin(x * 0.026 - t * 0.0012 + i * 1.3) * 0.4;
-        var mound = Math.exp(-dx * dx * 0.55) * (0.78 + 0.22 * Math.sin(dx * 2.9 + i * 0.8));
-        var spire = Math.exp(-dx * dx * 5) * 0.6;
-        var shoulder = Math.exp(-(dx + 1.15) * (dx + 1.15) * 1.6) * 0.3;
-        var land = (mound * 0.68 + spire + shoulder) * mass * L.peak * rise;
-        var calm = 1 - clamp01(land / (L.peak * 0.18 + 1));
-        var y = base - land - wave * amp * calm;
-        pts[n++] = y;
-        if (land > L.peak * 0.3 && y < summitY) { summitY = y; summitX = x; }
-      }
-
-      // Occlude the rows behind, then draw this row's line.
-      ctx.beginPath();
-      ctx.moveTo(-12, pts[0]);
-      for (var k = 1, xx = -8; k < n; k++, xx += 4) ctx.lineTo(xx, pts[k]);
-      ctx.lineTo(W + 12, H + 12);
-      ctx.lineTo(-12, H + 12);
-      ctx.closePath();
-      ctx.fillStyle = ABYSS;
-      ctx.fill();
-
-      ctx.beginPath();
-      ctx.moveTo(-12, pts[0]);
-      for (k = 1, xx = -8; k < n; k++, xx += 4) ctx.lineTo(xx, pts[k]);
-      var a = 0.12 + depth * 0.42;
-      var warm = clamp01(mass * rise * 0.95);
-      var g = ctx.createLinearGradient(0, 0, W, 0);
-      var left = clamp01((L.cx - L.sx * 1.8) / W), mid = clamp01(L.cx / W), right = clamp01((L.cx + L.sx * 1.8) / W);
-      g.addColorStop(0, rgba(SEA, a * 0.55));
-      g.addColorStop(left, rgba(SEA, a));
-      g.addColorStop(mid, rgba(mix(SEA, EMBER, warm), Math.min(1, a * (1 + warm * 0.9))));
-      g.addColorStop(right, rgba(SEA, a));
-      g.addColorStop(1, rgba(SEA, a * 0.55));
-      ctx.strokeStyle = g;
-      ctx.lineWidth = 0.8 + depth * 0.7;
-      ctx.stroke();
-    }
-
-    // The forge light at the summit.
-    if (rise > 0.05 && isFinite(summitY)) {
-      var flicker = reduce.matches ? 1 : 0.85 + 0.15 * Math.sin(t * 0.003);
-      var r = 46 * (W < 760 ? 0.75 : 1);
-      var glow = ctx.createRadialGradient(summitX, summitY + 6, 0, summitX, summitY + 6, r);
-      glow.addColorStop(0, rgba(EMBER, 0.5 * rise * flicker));
-      glow.addColorStop(1, rgba(EMBER, 0));
-      ctx.fillStyle = glow;
-      ctx.beginPath();
-      ctx.arc(summitX, summitY + 6, r, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.fillStyle = rgba(EMBER, rise);
-      ctx.beginPath();
-      ctx.arc(summitX, summitY + 1, 2.2, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-
-  function frame(now) {
-    draw(now - t0);
-    raf = requestAnimationFrame(frame);
-  }
-  function start() {
-    if (running || reduce.matches || !onScreen || document.hidden) return;
-    running = true;
-    raf = requestAnimationFrame(frame);
-  }
-  function stop() { running = false; cancelAnimationFrame(raf); }
-  function still() { draw(reduce.matches ? 0 : performance.now() - t0); }
-
-  resize();
-  still();
-  start();
-
-  window.addEventListener('resize', function () { resize(); still(); });
-  document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); else start(); });
-  if (reduce.addEventListener) reduce.addEventListener('change', function () { stop(); still(); start(); });
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries) {
-      onScreen = entries[0].isIntersecting;
-      if (onScreen) start(); else stop();
-    }).observe(hero);
-  }
-})();
-
-(function () {
-  var btn = document.getElementById('copy-email');
-  var email = document.getElementById('email');
-  if (!btn || !email) return;
-  var timer = 0;
-  function settle(label) {
-    btn.textContent = label;
-    clearTimeout(timer);
-    timer = setTimeout(function () { btn.textContent = 'Copy'; }, 1800);
-  }
-  function selectEmail() {
-    var range = document.createRange();
-    range.selectNodeContents(email);
-    var sel = window.getSelection();
-    sel.removeAllRanges();
-    sel.addRange(range);
-    settle('Selected');
-  }
-  btn.addEventListener('click', function () {
-    var text = email.textContent.trim();
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () { settle('Copied'); }, selectEmail);
-    } else {
-      selectEmail();
-    }
-  });
-})();
-</script>
+<script src="assets/site.js"></script>
 </body>
 </html>
