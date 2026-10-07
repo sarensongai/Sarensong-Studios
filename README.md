@@ -30,7 +30,7 @@ python3 -m http.server 8000
 - [ ] **Skyhoard name.** Marked as a working title on the site and press kit. Remove "working title" once it is final.
 - [ ] **Platform.** The press kit says PC. Change it if that's wrong.
 - [ ] **Socials.** Claim `@sarensong`, then add links to the footer and the press kit fact sheet.
-- [ ] **Email signature.** Put your name in `brand/email/signature.html`.
+- [ ] **Email signature.** Add your surname in `brand/email/signature.html` if you want it.
 - [ ] **New screenshots.** Drop them in `assets/skyhoard/` and swap the file names in `index.html` and `press.html`.
 
 ## Deploy on GitHub Pages
