@@ -69,7 +69,7 @@ One family keeps the site, the logo and every document consistent. Montserrat ap
 
 Plain, warm and specific. Short sentences and concrete nouns: wheel, cannon, plate, sand, forge.
 
-- Show the game doing things: "Plates crack and fall away, bare timber breaches and burns, and somebody has to grab the sand."
+- Show the game doing things: "Plates crack and get blown off, bare timber breaches and burns, and somebody has to grab the sand."
 - Be honest about stage: "pre-alpha", "prototype", "planned".
 - Talk about Claude the way you'd talk about a crewmate: what it builds and how, with real numbers. Avoid hype like "revolutionary" or "AI-powered".
 
