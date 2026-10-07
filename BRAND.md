@@ -1,128 +1,107 @@
 # Sarensong Studios brand guide
 
-Everything that makes Sarensong look and sound like Sarensong. Files live in `brand/`; the public version of this is `press.html`.
+How Sarensong looks, sounds and presents Skyhoard. Files live in `brand/`; the public version is `press.html`.
 
-## The name
+## Name
 
 - **Formal name:** Sarensong Studios
-- **Short name and wordmark:** SARENSONG
-- **Handle everywhere:** `@sarensong` (fallback: `@sarensongstudios`)
-- **Domain:** `sarensong.com` (fallback: `sarensongstudios.com`)
-
-The story behind it: a song carried across the water, the kind of call you can't help but follow. That's the feeling every Sarensong world should leave behind. (If the name comes from somewhere more personal, swap in the real story.)
-
-## Taglines
-
-- **Primary:** Worlds that call you back.
-- **Studio descriptor:** Independent game studio · Est. 2026
-- **Current-project line:** Now building Embertide.
-
-## Boilerplate
-
-**One line**
-> Sarensong Studios is a one-person indie game studio making stylized, story-led worlds.
-
-**Paragraph**
-> Sarensong Studios is an independent game studio founded in 2026. It is a team of one: design, code, art direction and story all come from a single developer, supported by an AI-assisted production pipeline built on Claude. The studio makes stylized, story-led games with handcrafted worlds that players want to come back to. Its debut project, Embertide, is in development.
-
-**Social bio (under 160 characters)**
-> Indie game studio of one. Stylized, story-led worlds that call you back. Now building Embertide, an island fable about dwarves.
-
-## Project 01: Embertide (working title)
-
-The name joins the dwarves' forge (**ember**) to the sea around their island (**tide**), which are also the brand's two accent colours.
-
-- **Tagline:** A stylized island fable about dwarves.
-- **Logline:** The sea swallowed their mountain. Now a small clan of dwarves must build a new hearth on an island that sings, and learn what its song is trying to tell them.
-- **Pillars:** An island you can read at a glance · Dwarves at the centre · Told like a fable
-- **Status:** Pre-alpha
-
-> The logline and the premise in the press kit are a starting proposal. Replace them with the real story whenever it's ready; the title, tagline and pillars still work with most dwarf-and-island premises.
-
-## Voice
-
-Warm, curious and plain-spoken, with a little myth and a little tech.
-
-- Short sentences. Concrete nouns: forge, tide, cove, hearth.
-- Talk to players like a friend showing them something they made.
-- Be honest about stage: "pre-alpha", "working title", "in development". Never oversell.
-- Avoid: hype words (revolutionary, epic, AAA-quality), and walls of lore.
-
-| Instead of | Write |
-| --- | --- |
-| An epic, revolutionary open-world experience | A small island, made by hand |
-| Leveraging cutting-edge AI | Built with Claude |
-| Coming soon!!! | In development. Follow along. |
+- **Logo:** SARENSONG over a spaced-out STUDIOS
+- **Handle everywhere:** `@sarensong` (fallback `@sarensongstudios`)
+- **Domain:** `sarensong.com` (fallback `sarensongstudios.com`)
+- **Tagline:** Worlds that call you back.
 
 ## Logo
 
-The mark is a sound wave that rises into a mountain peak, with an ember light inside it: the studio's song and the dwarves' forge in one shape.
+Your own stacked wordmark, rebuilt as vector shapes so it stays sharp at any size and needs no fonts installed.
+
+- **SARENSONG:** Barlow Semi Condensed ExtraBold (800)
+- **STUDIOS:** Montserrat Medium (500), letter-spaced to exactly the width of SARENSONG
+- Both fonts are free for commercial use (SIL Open Font License).
 
 | File | Use |
 | --- | --- |
-| `brand/logo/sarensong-lockup-on-dark.svg` | Default: website, slides, video end cards |
-| `brand/logo/sarensong-lockup-on-light.svg` | Documents, email, light backgrounds |
-| `brand/logo/sarensong-stacked-*.svg` | Square-ish spaces, posters |
-| `brand/logo/sarensong-mark-*.svg` | Avatars, favicons, watermarks |
-| `brand/logo/sarensong-lockup-white.svg` / `-black.svg` | One-colour printing, photos, merch |
-| `brand/logo/embertide-title-on-dark.svg` / `-on-light.svg` | The game's own logo |
+| `brand/logo/sarensong-stacked-ink.svg` | Primary logo, on stone or white |
+| `brand/logo/sarensong-stacked-paper.svg` | On ink, on pine, or over screenshots |
+| `brand/logo/sarensong-stacked-pine.svg` | On light backgrounds when you want the brand colour |
+| `brand/logo/sarensong-stacked-white.svg` | Pure white, for video and photos |
+| `brand/logo/sarensong-inline-*.svg` | One line, for menus, footers and small spaces |
+| `brand/logo/sarensong-monogram-*.svg` | The "S" tile, for avatars, favicons and app icons |
+| `brand/logo/skyhoard-title-*.svg` | The Skyhoard wordmark |
 | `brand/logo/png/` | PNG versions of all of the above, transparent backgrounds |
 
-All logo text is converted to outlines, so the files look right without the fonts installed.
+**Rules**
+- Clear space: at least the height of the word STUDIOS on every side.
+- Below about 160 px wide, use the one-line version. Below about 32 px, use the monogram.
+- One colour only: ink, stone, white or pine. No gradients, shadows, bevels or 3D effects in the logo itself. A 3D render is fine as a promotional picture, never as the logo.
 
-- **Clear space:** at least the height of the mark on every side.
-- **Minimum size:** horizontal lockup 120 px wide on screen, 30 mm in print. The mark alone 24 px.
-- **Don't:** recolour outside the palette, stretch, rotate, add shadows or outlines, or put the colour version on a busy photo (use the white one-colour version instead).
+## Colour: pine and stone
 
-## Colour
-
-| Name | Hex | Role |
+| Name | Hex | Use |
 | --- | --- | --- |
-| Abyss | `#07111A` | Backgrounds |
-| Deep | `#0C1A26` | Panels and cards |
-| Hairline | `#1B2C3A` | Borders and grid lines |
-| Foam | `#E4EEF1` | Main text on dark |
-| Mist | `#8EA3B0` | Secondary text |
-| Sea-glass | `#5ED6C9` | Studio accent: buttons, links, the mark |
-| Ember | `#FF9F57` | Embertide accent, the forge light |
-| Flare | `#FFE3B8` | Highlights within ember gradients |
+| Stone | `#F2F1EC` | Page background |
+| Stone light | `#F8F7F3` | Panels and cards |
+| Ink | `#161B18` | Text, logo, dark "night" sections |
+| Slate | `#646B66` | Secondary text |
+| Line | `#DAD8CF` | Borders and rules |
+| Pine | `#2D5C4C` | The one accent: buttons, links, numbers |
+| Lichen | `#A9CDBB` | Pine's partner on dark backgrounds |
 
-On light backgrounds, use the deeper variants in the light logo files: sea-glass `#0B7C71` and ember `#E8762A`.
-
-Sea-glass belongs to the studio and ember belongs to the game. Keep that split, and the two will always read as related but distinct.
+Pine text on stone and stone text on pine both have about 6.8:1 contrast, comfortably above the 4.5:1 minimum for readable text. Keep pine for the things people should notice or click; everything else is ink and stone. The game's screenshots supply the rest of the colour.
 
 ## Type
 
-All free on Google Fonts.
-
-| Face | Role |
+| Face | Use |
 | --- | --- |
-| **Chakra Petch** 600–700 | Studio headings and wordmark. Its angled cuts read as both game interface and chiselled stone. |
-| **Grenze** 800, uppercase | Embertide titles only. Heavy and carved, like dwarven lettering. |
-| **Hanken Grotesk** 400–600 | Body text. |
-| **Martian Mono** 400–500, uppercase, letter-spaced | Labels, status readouts, small print. |
+| **Barlow Semi Condensed** 800, uppercase | Big headings and the logo |
+| **Barlow Semi Condensed** 700 | Smaller headings, buttons |
+| **Barlow Semi Condensed** 600, uppercase, letter-spaced | Labels and small print |
+| **Barlow** 400–500 | Body text |
 
-## Imagery and motifs
+One family keeps the site, the logo and every document consistent. Montserrat appears only inside the logo.
 
-- **The ridgeline island:** stacked wave lines that swell into an island peak. It appears in the site hero, the banners and the title card. The code is in `assets/site.js`.
-- **The forge light:** one small ember glow at the summit. Use it once per composition.
-- **Interface frames:** thin corner brackets, hairline grids, monospace status labels (`PRE-ALPHA`, `PROJECT 01`). Keep them sparse.
-- When real screenshots exist, frame them with the corner brackets and let the game's colour do the talking.
+## Layout
+
+- Flat and calm: hairline rules instead of boxes, square corners, no glows, gradients or glass effects.
+- Real game footage is the hero. Never use stock "AI" imagery such as node meshes or circuit patterns.
+- Game sections sit on ink ("night" bands) so the screenshots glow. Studio sections sit on stone.
+
+## Voice
+
+Plain, warm and specific. Short sentences and concrete nouns: wheel, cannon, plate, sand, forge.
+
+- Show the game doing things: "Plates crack and fall away, bare timber breaches and burns, and somebody has to grab the sand."
+- Be honest about stage: "pre-alpha", "prototype", "planned".
+- Talk about Claude the way you'd talk about a crewmate: what it builds and how, with real numbers. Avoid hype like "revolutionary" or "AI-powered".
+
+## Skyhoard
+
+- **Tagline:** Two dwarf crews. Two airships. One floating island.
+- **One line:** Skyhoard is a first-person multiplayer game where two crews of dwarves fly armoured airships and fight over a floating island.
+- **Status:** Pre-alpha, Unity 6, PC.
+- **Screenshots:** `assets/skyhoard/` (14 in-game shots from the forgeship tour, 1600×900).
+
+## Boilerplate
+
+**Studio, one line**
+> Sarensong Studios is a one-person game studio that builds its games with Claude Code.
+
+**Studio, paragraph**
+> Sarensong Studios is an independent game studio founded in 2026 by a solo developer. Its games are engineered with Claude Code: the gameplay code, the scripts that model 3D assets and assemble every scene, the build tooling and the automated tests that let the game play itself. The developer directs, designs, writes the music and makes every final call. The studio's first game, Skyhoard, is in pre-alpha.
+
+**Social bio (under 160 characters)**
+> One-person game studio, built with Claude. Now making Skyhoard: two dwarf crews, two airships, one floating island.
 
 ## Social kit
 
 | File | Where |
 | --- | --- |
-| `brand/social/avatar-1024.png` | Profile picture everywhere (safe for circle crops) |
+| `brand/social/avatar-1024.png` | Profile picture everywhere (the pine "S") |
 | `brand/social/banner-1500x500.jpg` | X / Twitter and Bluesky header |
-| `brand/social/banner-youtube-2560x1440.jpg` | YouTube channel art (logo sits inside the mobile safe area) |
-| `brand/social/embertide-card-1920x1080.jpg` | Announcement posts, devlog covers, Discord |
-| `assets/og.png` | Link preview for the website |
-
-Handles to claim, in order: X, Bluesky (use `sarensong.com` as the handle once the domain is live), Instagram, TikTok, YouTube, Discord server, itch.io, and a Steam developer page when Embertide gets a store page.
+| `brand/social/banner-youtube-2560x1440.jpg` | YouTube channel art |
+| `brand/social/skyhoard-card-1920x1080.jpg` | Announcements, devlog covers, Discord |
+| `brand/social/og-1200x630.jpg` | Link preview when the website is shared |
 
 ## Email
 
-- `hello@sarensong.com` for public, press and partnerships
-- `yourname@sarensong.com` for you personally, and for the Claude for Startups application
-- Signature: `brand/email/signature.html`. Open it in a browser, select all, copy and paste it into your mail app's signature settings. It loads the logo from the live website, so publish the site first.
+- `hello@sarensong.com` for press and partnerships, `yourname@sarensong.com` for you and the Claude for Startups application.
+- Signature: `brand/email/signature.html`. Open it in a browser, select all, copy, and paste it into your mail app's signature settings. It loads the logo from the live website, so publish the site first.
