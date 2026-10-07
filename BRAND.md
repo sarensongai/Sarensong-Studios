@@ -85,13 +85,13 @@ Plain, warm and specific. Short sentences and concrete nouns: wheel, cannon, pla
 ## Boilerplate
 
 **Studio, one line**
-> Sarensong Studios is a one-person game studio that builds its games with Claude Code.
+> Sarensong Studios is a small independent game studio that builds its games with Claude Code.
 
 **Studio, paragraph**
-> Sarensong Studios is an independent game studio founded in 2026 by a solo developer. Its games are engineered with Claude Code: the gameplay code, the scripts that build 3D models and assemble every scene, the build tooling and the automated tests that let the game play itself. The developer designs the game, directs the art and makes every final call. The studio's first game, Skyhoard, is in pre-alpha.
+> Sarensong Studios is an independent game studio founded in 2026 and growing to a team of five. Its games are engineered with Claude Code: the gameplay code, the scripts that build 3D models and assemble every scene, the build tooling and the automated tests that let the game play itself. The team designs the game, directs the art and makes every final call. The studio's first game, Skyhoard, is in pre-alpha.
 
 **Social bio (under 160 characters)**
-> One-person game studio, built with Claude. Now making Skyhoard, a sky-based extraction looter.
+> Small game studio, built with Claude. Now making Skyhoard, a sky-based extraction looter.
 
 ## Social kit
 

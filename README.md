@@ -1,6 +1,6 @@
 # Sarensong Studios
 
-Website and brand kit for Sarensong Studios, a one-person game studio, and its first game **Skyhoard**: two dwarf crews, two airships, one floating island.
+Website and brand kit for Sarensong Studios, a small independent game studio growing to a team of five, and its first game **Skyhoard**, a sky-based extraction looter.
 
 It's a static site with no build step, so it can be hosted for free on GitHub Pages, Cloudflare Pages or Netlify.
 
